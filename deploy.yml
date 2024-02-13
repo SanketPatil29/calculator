@@ -6,7 +6,7 @@
   tasks:
     - name: Pull Docker Image
       docker_image:
-        name: "sanketp29/calculator"
+        name: "sanketp29/python_calculator"
         source: pull
       register: docker_pull_result
 
@@ -19,4 +19,4 @@
         name: docker
         state: started
     - name: Running container
-      shell: docker run -it -d --name calculator sanketp29/calculator
+      shell: docker run -it -d --name python_calculator sanketp29/python_calculator
